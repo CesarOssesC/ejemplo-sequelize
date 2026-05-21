@@ -9,9 +9,9 @@ async function listarProductos() {
     }
 }
 
-async function crearProducto(nombre, precio, stock) {
+async function crearProducto(nombre, precio, stock, categoriaId) {
     try {
-        const producto = await Producto.create({nombre, precio, stock})
+        const producto = await Producto.create({nombre, precio, stock, categoriaId})
         console.log('Producto creado: ', producto.toJSON())
     } catch (error) {
         console.error('Error al crear el producto', error)

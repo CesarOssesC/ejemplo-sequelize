@@ -9,7 +9,7 @@ async function listarCategorias() {
     }
 }
 
-async function crearCategoria(nombre, precio, stock) {
+async function crearCategoria(nombre) {
     try {
         const categoria = await Categoria.create({ nombre })
         console.log('Categoria creado: ', categoria.toJSON())
